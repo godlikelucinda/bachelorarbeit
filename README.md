@@ -1,6 +1,27 @@
 # bachelorarbeit
 LaTeX-Vorlage für Bachelorarbeit
 
+# Arbeiten mit git
+
+## Änderungen eintragen
+
+```
+git add kapitel/Einleitung.tex
+git commit -m "Einleitung geändert."
+```
+
+## Änderungen zum Server hochladen
+
+```
+git push
+```
+
+## Änderungen vom Server holen
+
+```
+git pull
+```
+
 # Git installieren unter Ubuntu 18.04
 
 ```
