@@ -2,6 +2,7 @@
 scale 2
 skinparam monochrome true
 skinparam shadowing false
+left to right direction
 
 :Nutzer: as User
 :Freund: as Friend
