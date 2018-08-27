@@ -2,6 +2,7 @@
 scale 2
 skinparam monochrome true
 skinparam shadowing false
+left to right direction
 
 :Nutzer: as User
 :Freund: as Friend
@@ -14,14 +15,15 @@ skinparam shadowing false
 (Bestellung überprüfen) as (checkOrder)
 (Bankinformation speichern) as (bankInformation)
 
-User - (paymentProblem)
-User <-- (sendPaymentResult)
-Friend <-- (sendPaymentResult)
-(paymentProblem) - (paymentRequest)
+User -- (paymentProblem)
+(paymentProblem) -- (paymentRequest)
+(authorizePayment) -- Friend
+(checkOrder) -- Friend
+(bankInformation) -- Friend
+(sendPaymentResult) --> Friend
 (paymentRequest) --> Friend
-(authorizePayment) - Friend
-Friend -- (checkOrder)
-Friend - (bankInformation)
-(sendPaymentResult) -- System
+User <--- (sendPaymentResult)
+(sendPaymentResult) -down- System
+
 
 @enduml
