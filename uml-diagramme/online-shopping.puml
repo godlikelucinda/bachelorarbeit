@@ -2,6 +2,7 @@
 scale 2
 skinparam monochrome true
 skinparam shadowing false
+left to right direction
 
 :Kunde: as Customer
 :Freund: as Friend1
@@ -16,11 +17,11 @@ skinparam shadowing false
 (Erfahrung teilen und Bewertung abgeben) as (experience)
 (Pay by Others) as (payByOthers)
 
-(suggest) -> Customer
+Customer <- (suggest)
 
-Friend1 -> (suggest)
-Friend2 -> (suggest)
-Friend3 -> (suggest)
+(suggest) <- Friend1
+(suggest) <- Friend2
+(suggest) <- Friend3
 
 (suggest) --> (communication)
 (suggest) --> (multiSelect)
@@ -32,6 +33,6 @@ Friend3 -> (suggest)
 (experience) --> Seller
 (payByOthers) --> Service
 
-note top of Friend1 : Freunde von Kunden\n sind ebenfalls Kunden
+note right of Friend1 : Freunde von Kunden\n sind ebenfalls Kunden
 
 @enduml
