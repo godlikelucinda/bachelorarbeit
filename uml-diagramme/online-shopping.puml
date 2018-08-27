@@ -1,0 +1,37 @@
+@startuml
+scale 2
+skinparam monochrome true
+skinparam shadowing false
+
+:Kunde: as Customer
+:Freund: as Friend1
+:Freund: as Friend2
+:Freund: as Friend3
+:Verkäufer: as Seller
+:Webshop-Service: as Service
+
+(Vorschlag anbieten,\ngekaufte Güter anzeigen\nund Bewertung) as (suggest)
+(Realtime-Kommunikation) as (communication)
+(Viele Produkte auswählen können\nund online Flohmarkt) as (multiSelect)
+(Erfahrung teilen und Bewertung abgeben) as (experience)
+(Pay by Others) as (payByOthers)
+
+(suggest) -> Customer
+
+Friend1 -> (suggest)
+Friend2 -> (suggest)
+Friend3 -> (suggest)
+
+(suggest) --> (communication)
+(suggest) --> (multiSelect)
+(suggest) --> (experience)
+(suggest) --> (payByOthers)
+
+(communication) --> Seller
+(multiSelect) --> Seller
+(experience) --> Seller
+(payByOthers) --> Service
+
+note top of Friend1 : Freunde von Kunden\n sind ebenfalls Kunden
+
+@enduml
