@@ -1,0 +1,27 @@
+@startuml
+scale 2
+skinparam monochrome true
+skinparam shadowing false
+
+:Nutzer: as User
+:Freund: as Friend
+:System:
+
+(Zahlungsproblem haben) as (paymentProblem)
+(Zahlungsergebnis senden) as (sendPaymentResult)
+(Zahlungsanfrage) as (paymentRequest)
+(Zahlung genehmigen) as (authorizePayment)
+(Bestellung überprüfen) as (checkOrder)
+(Bankinformation speichern) as (bankInformation)
+
+User - (paymentProblem)
+User <-- (sendPaymentResult)
+Friend <-- (sendPaymentResult)
+(paymentProblem) - (paymentRequest)
+(paymentRequest) --> Friend
+(authorizePayment) - Friend
+Friend -- (checkOrder)
+Friend - (bankInformation)
+(sendPaymentResult) -- System
+
+@enduml
