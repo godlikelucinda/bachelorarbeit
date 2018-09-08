@@ -72,6 +72,8 @@
 \newcommand{\ltab}{\raggedright\arraybackslash} % Tabellenabschnitt linksbündig
 \newcommand{\ctab}{\centering\arraybackslash} % Tabellenabschnitt zentriert
 \newcommand{\rtab}{\raggedleft\arraybackslash} % Tabellenabschnitt rechtsbündig
+% Paket um Zellen in Tabellen unterteilen zu können
+\usepackage{diagbox}
 
 %
 % Paket um Quellcode im Dokument zu formattieren
@@ -123,3 +125,12 @@
 \newcommand{\term}[1]{\emph{#1}}
 \newcommand{\latex}{\LaTeX\xspace}
 \newcommand{\tex}{\TeX\xspace}
+
+%
+% Paket für URLs
+%
+\usepackage{url}
+\usepackage{etoolbox}
+\appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
+\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
+\do\x\do\y\do\z}
