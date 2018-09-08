@@ -1,0 +1,37 @@
+@startuml
+scale 2
+skinparam monochrome true
+skinparam shadowing false
+left to right direction
+
+:Nutzer: as User
+:Freund: as Friend
+
+(Vorschlag brauchen) as (suggestionNeeded)
+(Vorschlag erhalten) as (suggestionReceived)
+(Feedback geben) as (feedback)
+
+(Information als URL senden) as (infoAsUrl)
+(Vorschlag geben) as (suggestionProvide)
+(Produkt auswählen) as (productSelect)
+
+(Information erhalten) as (informationReceived)
+(System einloggen) as (login)
+(Weiter einkaufen) as (continueShopping)
+
+User -- (suggestionNeeded)
+User -- (suggestionReceived)
+User -- (feedback)
+
+(suggestionNeeded) -- (infoAsUrl)
+(suggestionReceived) -- (suggestionProvide)
+(suggestionReceived) -- (productSelect)
+
+(infoAsUrl) -- (informationReceived)
+(suggestionProvide) -- (login)
+
+(informationReceived) -- Friend
+(login) -- Friend
+(continueShopping) -- Friend
+
+@enduml

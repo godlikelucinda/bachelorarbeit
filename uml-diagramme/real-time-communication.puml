@@ -1,0 +1,32 @@
+@startuml
+scale 2
+skinparam monochrome true
+skinparam shadowing false
+left to right direction
+
+:Nutzer: as User
+:Freund: as Friend
+:Verkäufer: as Seller
+
+(Nachricht senden) as (sendMessage)
+(Nachricht sofort erhalten) as (receiveMessage)
+(Anomalie,\nNachricht kann nicht gesendet werden) as (anomaly)
+(Nachricht speichern) as (saveMessage)
+(Nachricht senden und erhalten) as (sendReceiveMessage)
+
+User -- (sendMessage)
+(sendMessage) -- (receiveMessage)
+(receiveMessage) -- Friend
+
+User -- (anomaly)
+(anomaly) -- Friend
+
+User -- (saveMessage)
+(saveMessage) -- Friend
+
+User <-- (sendReceiveMessage)
+(sendReceiveMessage) --> Friend
+(sendReceiveMessage) --- Seller
+
+
+@enduml
