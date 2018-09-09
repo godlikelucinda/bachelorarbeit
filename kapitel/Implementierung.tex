@@ -120,6 +120,10 @@ Der Supernode ist tatsächlich ein gewöhnlicher Knoten, der bestimmte Anforderu
 
 \section{Freunde einladen}
 
+Um Freunde einzuladen wird durch das System eine URL generiert. Die URL enthält einen einmal gültigen Token an der Sitzung im Webshop teilnehmen zu können. Diese generierte URL wird an einen Freund gesendet.
+
+Wenn ein Freund die Linkinformationen erhält, kann er direkt auf den Link klicken und ohne Anmeldung Beratung geben. Dann kann der Benutzer eine Entscheidung treffen und die Freunde können ausloggen oder weiter einkaufen.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{uml-diagramme/freunde-einladen.png}
@@ -132,6 +136,10 @@ Der Supernode ist tatsächlich ein gewöhnlicher Knoten, der bestimmte Anforderu
 
 \section{Pay by Others}
 
+Wenn ein Benutzer auf ein Zahlungsproblem stößt, z. B. eine Kreditkarte gesperrt wurde, kann er eine Zahlungsanforderung an einen Freund senden. Freunde beziehen sich hier nicht nur auf Freunde, sondern beziehen sich auch auf andere Bekannte, wie Eltern, Brüder, Schwestern, Freunde, Verwandte und so weiter. Der Freund erhält die Anfrage, überprüft die Bestellung zuerst oder später und entscheidet sich dann für die Annahme oder Ablehnung.
+
+Nachdem die Zahlung abgeschlossen ist, speichert das System automatisch die Zahlungsinformationen und sendet die Zahlungserfolgs- oder Fehlerinformationen an den Benutzer und den Freund.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{uml-diagramme/pay-by-others.png}
@@ -141,6 +149,8 @@ Der Supernode ist tatsächlich ein gewöhnlicher Knoten, der bestimmte Anforderu
 
 
 \section{Realtime Kommunikation}
+
+Auf dieser Website sind drei Hauptbeteiligte an der Transaktion beteiligt: Nutzer, Freunde und Verkäufer. Das System bietet ein Online-Chat-Tool für die  drei Akteure. Sie  verwenden es, um Produktprobleme zu besprechen, Ratschlägen auszutauschen, Hilfe und Feedback zu geben. Wenn die Nachricht bei der Applikation nicht gesendet wird, beispielsweise wenn ein Akteur offline ist, wird die Nachricht  auf dem Server gespeichert, bis der Teilnehmer wieder online ist.
 
 \begin{figure}[htbp]
 	\centering
