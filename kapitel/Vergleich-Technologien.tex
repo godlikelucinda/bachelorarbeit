@@ -1,26 +1,28 @@
 % !TEX root =../main.tex
 
-\chapter{Vergleich möglicher Technologien (5 Seiten)}
+\chapter{Vergleich möglicher Technologien}
 
 
 \section{WebGL und tree.js}
 
 WebGL (Web Graphics Library) ist eine Javascript-API zum Rendern interaktiver 3D und 2D Grafiken mit Hilfe eines kompatiblen Web-Browsers ohne den Einsatz zusätzlicher Plugins. Mit WebGL steht eine API zur Verfügung, die an OpenGL ES 2.0 angelehnt ist und deren Inhalte mittels eines <canvas> Elements dargestellt werden
 
-Schwerpunkt: Performance
+Kritikpunkt: Performance
 
 
 \section{Zusätzliche Plugins}
 
-Um schnellstmöglich detaillierte dreidimensionale Inhalte auf einer Webseite anzuzeigen, können Browser-Plugins verwendet werden. Dadurch werden Daten lokalen auf dem Endgerät des Nutzers. Der Server muss nicht bei jedem Aufruf wiederholt sämtliche Daten bereitstellen und nur Aktualisierung bereitstellen, wodurch der Server entlastet wird.
+Um schnellstmöglich detaillierte dreidimensionale Inhalte auf einer Webseite anzuzeigen, können Browser-Plugins verwendet werden. Dadurch werden Daten lokalen auf dem Endgerät des Nutzers. Der Server muss nicht bei jedem Aufruf wiederholt sämtliche Daten bereitstellen und nur Aktualisierungen liefern, wodurch der Server entlastet wird.
 
-Schwerpunkt: Akzeptanz des Nutzers gegenüber zusätzlich zu installierenden Abhängigkeiten
+Kritikpunkt: Akzeptanz des Nutzers gegenüber zusätzlich zu installierenden Abhängigkeiten
 
 
 \section{Auf C basierende Frameworks}
 
-Vorteile : Beste Performance, höchste grafische Qualität
-
 Bei Titeln wie DOTA oder World of Warcraft müssen die Nutzer umfangreiche Softwarepakete herunterladen, damit sie diese Spiele online mit anderen Nutzern erleben können. Im Rahmen dieser Arbeit wird aus diesem Grund auch diese Variante der technischen Realisierung betrachtet. Ein Fokus liegt hierbei auf Frameworks welche in C, C++, Assembler implementiert sind. Als Shader-Sprache oder Skriptsprache wird C oder Java betrachtet.
 
-Außerdem wird eine Engine benötigt. Sie bestimmt die grundlegenden Operationen und Effekte einer 3D- Webseite. Die allgemeine Entwicklungsarchitektur ist, von unten nach oben, DirectX (Windows-Plattform) – Engine - kooperatives Einkaufen. DirectX basiert auf OpenGL und  stellt eine einheitliche Schnittstelle zu allen Grafikkarten bereit, um ein Programmiermodell mit Hardware-Rendering anzubieten. Die DirectX-Schnittstelle hat gute Performance aber nur einfache Mal-Funktionen. Es ist notwendig, wir soll durch Auswahlen und Encapsulating  die abstraktere  Entwicklungsschnittstellen und Framework realisieren, die als eine Grafik-Engine in der Spiel-Engine verstanden werden können. Diese Teile der Entwicklung kann in C/C++ und Assembler realisiert werden. Die Engine ist kompliziert und integriert, inklusive Grafik-Engine, Audio-Engine, Kunstressourcenverwaltung, Script-Engine usw.. Bei  Assembler verbessert sich die Effizienz und bei Script-Sprache muss man nicht etwas wiederholt tun.
+Außerdem wird eine Engine benötigt. Sie bestimmt die grundlegenden Operationen und Effekte einer 3D- Webseite. Die allgemeine Entwicklungsarchitektur ist, von unten nach oben, DirectX (Windows-Plattform) – Engine - kooperatives Einkaufen. DirectX basiert auf OpenGL und  stellt eine einheitliche Schnittstelle zu allen Grafikkarten bereit, um ein Programmiermodell mit Hardware-Rendering anzubieten. Die DirectX-Schnittstelle hat gute Performance aber nur einfache Mal-Funktionen. Es ist notwendig, durch Kapselung abstraktere  Entwicklungsschnittstellen und Frameworks zu realisieren, die als eine Grafik-Engine in der Spiel-Engine verstanden werden können. Diese Teile der Entwicklung kann in C/C++ und Assembler realisiert werden. Die Engine ist kompliziert und integriert, inklusive Grafik-Engine, Audio-Engine, Kunstressourcenverwaltung, Script-Engine usw.. Bei  Assembler verbessert sich die Effizienz und bei Script-Sprache muss man nicht etwas wiederholt tun.
+
+Kritikpunkt: Mögliche Plattformabhängigkeit
+
+Vorteile : Beste Performance, höchste grafische Qualität

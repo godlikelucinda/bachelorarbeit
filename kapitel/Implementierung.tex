@@ -2,19 +2,17 @@
 
 \chapter{Implementierung}
 
-In dieser Kapitel kann wir ein „ Instanz“ machen. Angenommen, der Nutzer A will ein Computer bei online Shops kaufen, er besitzt nicht Die Erkenntnisse von Hardware und Software, die Parameter von Konfiguration ist ihm Schwer , Er braucht die Hilfe von anderer Leute.
+In diesem Kapitel wird dargestellt, wie ein Teil der Implementierung durchgeführt werden können. Angenommen, der Nutzer A will ein Computer in einem Webshop kaufen. Er besitzt nicht die Kenntnisse im Bereich von Hardware und Software um dies eigenständig zu tun. Eine Konfiguration vor Parametern fällt ihm Schwer. Er braucht die Hilfe von anderen Leuten.
 
 \begin{description}
-\item[Schritt 1:] Nutzer A loggt unser Webshop ein, sucht nach „ Computer“.
+\item[Schritt 1:] Nutzer A loggt sich in den Webshop ein und sucht nach „Computer“.
 
-\item[Schritt 2:] Viele unterschiedliche Computer erscheinen auf den Bildschirm, durch Vergleich von Aussehen hat Nutzer A 3 Marke davon ausgewählt. Er will mit den 3 Verkäufer von den Marke Kontakt machen und nachfragen, wer kann das niedrigste Rabatt anbieten.
+\item[Schritt 2:] Viele unterschiedliche Computer erscheinen auf dem Bildschirm. Durch einen Vergleich des optischen Designs hat Nutzer A drei Marken ausgewählt. Er will durch drei Verkäufer bezüglich der drei ausgewählten Marken beraten werden. Des weiteren möchte er erfahren, welche Rabatte möglich sind.
 \end{description}
 
-Jetzt erzielen die Kommunikation mittels PHP.
+Diese gewünschte Kommunikation könnte mittels PHP implementiert werden.
 
-In Listing \vref{lst:php-chat} ist dargestellt, wie ein Online-Chat in PHP implementiert werden kann.
-
-% TODO: Quellcode einfügen.
+In Listing \vref{lst:php-chat} ist dargestellt, wie ein Online-Chat in PHP implementiert werden könnte.
 
 \begin{lstlisting}[language=PHP, caption={Online-Chat in PHP}, label=lst:php-chat]
 // socket-resource und die info vom Nutzer speichern
@@ -80,21 +78,21 @@ $msg = [
 ];
 \end{lstlisting}
 
-Seine Nachfrage nehmt in 2 Sekunden bei REAL-Time API die Antwort, zwei Verkäufer aus Dell und Acer versprechen, sie können ein attraktives Rabatt anbieten.
+Auf seine Nachfrage erhält Nutzer A in 2 Sekunden eine Antwort bei Real-Time API. Zwei Verkäufer aus Dell und Acer versprechen, sie können einen attraktiven Rabatt anbieten.
 
 \begin{description}
-\item[Schritt 3:] Nutzer A entscheiden, ein Computer von DELL und Acer wird ausgewählt. Er will die Hardware und Komponenten vergleichen. Die Tochter ‘ s Ex Ehemann B von seinem Onkel‘s Cousin ist ein Hardwaretechniker. Nutzer A will die Hilfe von B bekommen.
+\item[Schritt 3:] Nutzer A entscheidet sich dafür, einen Computer von Dell oder Acer auszuwählen. Er will die Hardware und Komponenten vergleichen. Der Ehemann B von der Tochter seines Onkel‘s Cousin ist ein Hardwaretechniker. Nutzer A will die Hilfe von B bekommen.
 
-\item[Schritt 3.1:] Die Kontakt List öffnet, neue Kontaktperson hinzufügen. Der Telefonnummer von B eingeben.
+\item[Schritt 3.1:] Die Kontakt Liste wird geöffnet, neue Kontaktperson hinzufügen. Der Telefonnummer von B wird eingegeben.
 
-\item[Schritt 3.2:] \glqq{}Commit\grqq{} zu B senden, A ist glücklich wegen guter Freundschaft bestätigt B durch sein Handy SMS.
+\item[Schritt 3.2:] \glqq{}Commit\grqq{} zu B gesendet. A ist glücklich. Wegen guter Freundschaft bestätigt B die Kontaktanfrage per SMS.
 \end{description}
 
 Die Verbindung zwischen Network und Mobile Smartphone:
 
 Netzwerkstruktur
 
-Im Gegensatz zu herkömmlichen Telekommunikationsdienstnetzwerken müssen wir nicht nur Server, sondern auch zentralisierte Server registrieren und Benutzerknoten in normale Knoten und Superknoten unterteilen. Registrierungsserver Systemverbindungsstruktur wie gezeigt Schematisch
+Im Gegensatz zu herkömmlichen Telekommunikationsdienstnetzwerken müssen wir nicht nur Server, sondern auch zentralisierte Server registrieren und Benutzerknoten in normale Knoten und Superknoten unterteilen. Registrierungsserver Systemverbindungsstruktur ist nachfolgend systematisch dargestellt.
 
 \begin{figure}[htbp]
 	\centering
@@ -103,14 +101,14 @@ Im Gegensatz zu herkömmlichen Telekommunikationsdienstnetzwerken müssen wir ni
 	\label{fig:telekommunikation}
 \end{figure}
 
-Der Registrierungsserver ist ein Gerät, das gewartet werden muss.Es ist verantwortlich für das Registrieren des Clients, das Speichern und Verwaltenvon Benutzernamen und Kennwortinformationen.Wenn sich der Benutzer beim System anmeldet, wird der Benutzer authentifiziert. Der Registrierungsserver muss außerdem die globale Eindeutigkeit des Benutzernamens prüfen und garantieren.
+Der Registrierungsserver ist ein Gerät, das gewartet werden muss. Es ist verantwortlich für das Registrieren des Clients, das Speichern und Verwalten von Benutzernamen und Kennwortinformationen. Wenn sich der Benutzer beim System anmeldet, wird der Benutzer authentifiziert. Der Registrierungsserver muss außerdem die globale Eindeutigkeit des Benutzernamens prüfen und garantieren.
 
-Normale Knoten, dh normale Host-Terminals, müssen Online-Store-Anwendungen herunterladen, um Sprachanrufe und Textnachrichten bereitstellen zu können.
+Normale Knoten, d. h. normale Host-Terminals, müssen Online-Store-Anwendungen herunterladen, um Sprachanrufe und Textnachrichten bereitstellen zu können.
 
 Der Supernode ist tatsächlich ein gewöhnlicher Knoten, der bestimmte Anforderungen erfüllt: Diese Anforderungen umfassen eine öffentliche Netzwerkadresse, eine ausreichende CPU, ausreichend Speicherplatz und eine ausreichende Netzwerkbandbreite. Mit anderen Worten, jedes geeignete Host-Terminal kann ein Super-Knoten werden, vorausgesetzt, die Anwendung wird geladen.
 
 
-\section{Prozessmodell zur Beschreibung des Ablauf von Kaufen}
+\section{Prozessmodell zur Beschreibung des Kaufprozesses}
 
 \begin{figure}[htbp]
 	\centering
